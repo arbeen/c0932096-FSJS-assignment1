@@ -1,21 +1,36 @@
+//- index.pug: Homepage with a list of all existing users
+//- Routed at /
 extends layout
 
 block content
   h3 User List
   .w3-container.w3-card-4.w3-padding-32.w3-margin-top
-    table.w3-table.w3-bordered.w3-striped.w3-hoverable
+    table.w3-table.w3-bordered.w3-striped
       thead
         tr
           th Name
           th Email
+          th Date of Birth
+          th Address Line 1
+          th Address Line 2
+          th City
+          th Postal Code
+          th Country
+          th Phone Number
+          th Notes
           th Actions
       tbody
         each user in users
           tr
             td #{user.firstName} #{user.lastName}
             td #{user.email}
+            td #{user.dateOfBirth.toISOString().split('T')[0]}
+            td #{user.address1}
+            td #{user.address2}
+            td #{user.city}
+            td #{user.postalCode}
+            td #{user.country}
+            td #{user.phoneNumber}
+            td #{user.notes}
             td
-              a(href=`/user/${user._id}`, class="w3-button w3-blue w3-margin-right") Details
-              a(href=`/edit/${user._id}`, class="w3-button w3-green w3-margin-right") Edit
-              form(action=`/delete/${user._id}`, method="POST", style="display:inline")
-                button(type="submit", class="w3-button w3-red") Delete
+              a(href=`/edit/${user._id}`, class="w3-button w3-small w3-green w3-margin-right") Edit

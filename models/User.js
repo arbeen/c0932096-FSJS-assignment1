@@ -1,3 +1,5 @@
+// User.js: Contains schema for all models
+
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({

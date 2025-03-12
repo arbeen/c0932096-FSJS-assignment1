@@ -1,22 +1,16 @@
-# How to Use the User Management App
+# User Guide to User Management App
 
 ## 1. User List
-- View all users with options to **View**, **Edit**, or **Delete**.
+- View all users with options to **Edit**.
 
-## 2. Viewing User Details
-- Click **Details** to see user info. Use **Back to User List** to return.
-
-## 3. Adding a New User
+## 2. Adding a New User
 - Click **Add New User**, fill out the form with required details, and click **Submit**.
 
-## 4. Editing User Information
+## 3. Editing User Information
 - Click **Edit** to update a user’s details. Click **Update** to save or **Delete** to remove the user.
 
-## 5. Deleting a User
+## 4. Deleting a User
 - Click **Delete** next to a user to remove them permanently.
-
-## 6. Navigation
-- Use **Back to User List** to return to the list or navigate through **Edit** and **Details**.
 
 
 Installation and Running Locally
@@ -30,18 +24,18 @@ Navigate to the project folder and install the required dependencies using npm:
 
 `npm install`
 
-### 3\. Setup MongoDB
+### 2\. Setup MongoDB
 
 Ensure you have **MongoDB** installed and running locally, or use a **MongoDB Atlas** cluster.
 
 
-### 4\. Configure Environment Variables
+### 3\. Configure Environment Variables
 
 Create a `.env` file in the root directory with your MongoDB connection string:
 
-`MONGODB_URI=mongodb://localhost:27017/user_management`
+`MONGO_URI=mongodb://localhost:27017/fsjs-assignment1`
 
-### 5\. Run the Application
+### 4\. Run the Application
 
 Start the server:
 
