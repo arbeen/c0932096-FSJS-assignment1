@@ -1,0 +1,15 @@
+doctype html
+include _mixins.pug
+
+html
+  head
+    title c0932096
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/w3-css/w3.css")
+  body
+    +navbar("User Management System")
+      +nav_item("/", activePage === "home" ? "w3-blue": "") Home
+      +nav_item("/add", activePage === "add" ? "w3-blue": "") Add User
+      +right_nav_item("by Arbin Shrestha(c0932096)")  
+    
+    +container
+      block content

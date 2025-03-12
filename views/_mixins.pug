@@ -1,0 +1,21 @@
+//- Light Gray Navbar Mixin with Bold Title
+mixin navbar(title)
+  nav.w3-bar.w3-light-grey  
+    .w3-content(style="max-width: 1200px;")  
+      a.w3-bar-item.w3-button.w3-text-black(style="font-weight: bold;")= title
+      block  
+
+//- Navigation Item Mixin
+mixin nav_item(link, activeClass)
+  a.w3-bar-item.w3-button.w3-hover-blue(href=link class=activeClass)
+    block  
+
+//- Right-Aligned Navigation Item Mixin
+mixin right_nav_item(text)
+  a.w3-bar-item.w3-right.w3-text-black
+    = text  
+
+//- Container Mixin for Content
+mixin container
+  .w3-content(style="max-width: 1200px;")
+    block

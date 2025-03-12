@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  h3 Add New User
+  .w3-container.w3-card-4.w3-padding-32.w3-margin-top
+    form(action="/add", method="POST")
+      
+      .w3-row-padding
+        .w3-col.s12.m6
+          label(for="firstName") First Name
+          input.w3-input.w3-border(type="text", name="firstName", id="firstName", placeholder="First Name", required)
+        
+        .w3-col.s12.m6
+          label(for="lastName") Last Name
+          input.w3-input.w3-border(type="text", name="lastName", id="lastName", placeholder="Last Name", required)
+
+      .w3-row-padding
+        .w3-col.s12.m6
+          label(for="dateOfBirth") Date of Birth
+          input.w3-input.w3-border(type="date", name="dateOfBirth", id="dateOfBirth", required)
+        
+        .w3-col.s12.m6
+          label(for="address1") Address Line 1
+          input.w3-input.w3-border(type="text", name="address1", id="address1", placeholder="Address Line 1", required)
+
+      .w3-row-padding
+        .w3-col.s12.m6
+          label(for="address2") Address Line 2
+          input.w3-input.w3-border(type="text", name="address2", id="address2", placeholder="Address Line 2")
+        
+        .w3-col.s12.m6
+          label(for="city") City
+          input.w3-input.w3-border(type="text", name="city", id="city", placeholder="City", required)
+
+      .w3-row-padding
+        .w3-col.s12.m6
+          label(for="postalCode") Postal Code
+          input.w3-input.w3-border(type="text", name="postalCode", id="postalCode", placeholder="Postal Code", required)
+        
+        .w3-col.s12.m6
+          label(for="country") Country
+          input.w3-input.w3-border(type="text", name="country", id="country", placeholder="Country", required)
+
+      .w3-row-padding
+        .w3-col.s12.m6
+          label(for="phoneNumber") Phone Number
+          input.w3-input.w3-border(type="text", name="phoneNumber", id="phoneNumber", placeholder="Phone Number", required)
+        
+        .w3-col.s12.m6
+          label(for="email") Email
+          input.w3-input.w3-border(type="email", name="email", id="email", placeholder="Email", required)
+
+      .w3-row-padding
+        .w3-col.s12
+          label(for="notes") Notes
+          textarea.w3-input.w3-border(name="notes", id="notes", placeholder="Notes" rows="5")
+
+      button.w3-button.w3-blue.w3-margin-top.w3-block(type="submit") Submit

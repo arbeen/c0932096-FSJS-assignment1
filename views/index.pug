@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h3 User List
+  .w3-container.w3-card-4.w3-padding-32.w3-margin-top
+    table.w3-table.w3-bordered.w3-striped.w3-hoverable
+      thead
+        tr
+          th Name
+          th Email
+          th Actions
+      tbody
+        each user in users
+          tr
+            td #{user.firstName} #{user.lastName}
+            td #{user.email}
+            td
+              a(href=`/user/${user._id}`, class="w3-button w3-blue w3-margin-right") Details
+              a(href=`/edit/${user._id}`, class="w3-button w3-green w3-margin-right") Edit
+              form(action=`/delete/${user._id}`, method="POST", style="display:inline")
+                button(type="submit", class="w3-button w3-red") Delete
