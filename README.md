@@ -18,9 +18,6 @@
 ## 6. Navigation
 - Use **Back to User List** to return to the list or navigate through **Edit** and **Details**.
 
-## 7. Notes
-- Required fields must be filled in when adding or editing users. Ensure correct email format before submitting.
-
 
 Installation and Running Locally
 --------------------------------

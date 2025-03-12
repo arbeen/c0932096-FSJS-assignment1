@@ -16,6 +16,7 @@ mongoose.connect(process.env.MONGO_URI, {
 const app = express();
 app.set('view engine', 'pug');
 
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use('/', userRoutes);
